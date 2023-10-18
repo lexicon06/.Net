@@ -1,0 +1,35 @@
+Prerequisites
+
+.NET SDK: You’ll need the .NET 5.0 SDK. You can download it from the official .NET download page.
+Node.js: This includes npm, which you’ll need for the React app. You can download it from the official Node.js download page.
+Step 1: Create the Project First, open your terminal and navigate to the directory where you want to create your project. Then run these commands:
+
+dotnet new react -o reactnet-tutorial
+cd reactnet-tutorial
+
+This will create a new .NET project with a React front end in a folder called reactnet-tutorial, and then navigate into that folder.
+
+Step 2: Install Dependencies Next, navigate into the ClientApp folder, which is where the React app is located. Then install the npm dependencies:
+
+cd ClientApp
+npm install
+
+Step 3: Navigate Back to Root Directory After the installation is complete, navigate back to the root directory of your project:
+
+cd ..
+
+Step 4: Run the Application Now you’re ready to run your application. Use this command:
+
+dotnet run
+
+This will start both the .NET server and the React development server. You can now open your web browser and navigate to https://localhost:5001 to see your application.
+
+Step 5: Develop Your Application Open your project in Visual Studio Code. You’ll see a ClientApp folder (this is your React app) along with various .NET configuration files. The entry point for the React application is ClientApp/src/index.js. The main layout for the website is in ClientApp/src/components/Layout.js, and the home page is in ClientApp/src/components/Home.js. You can start developing your application now. Any changes you make to the React application will be live reloaded in your browser, thanks to Create React App.
+
+Step 6: Build for Production When you’re ready to build a production-ready version of your application, you can run:
+
+dotnet publish -c Release
+
+This command will create a production build of your React app and place it in the build folder within ClientApp. It will also compile your .NET code and place it alongside your static files.
+
+That’s it! You’ve just created a .NET app with a React front end using Visual Studio Code, developed it, and prepared it for production. Happy coding! 🚀
